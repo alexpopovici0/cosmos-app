@@ -1,5 +1,5 @@
 import React, { FC, useState, useEffect } from "react";
-import { Navbar, Container, Nav, NavDropdown, Form } from "react-bootstrap";
+import { Navbar, Container, Nav, Form } from "react-bootstrap";
 import { PropsTheme } from "../../Types/interfaces";
 import Cart from "../../Assets/Images/Navigation/cart.png";
 import Planet from "../../Assets/Images/Navigation/planet.png";
@@ -27,8 +27,11 @@ const CoreNavbar: FC<PropsTheme> = ({ theme }) => {
   return (
     <Navbar expand="lg" style={style}>
       <Container>
-        <Navbar.Brand style={{ ...font, fontWeight: "bold" }} href="#home">
-          COSMOS
+        <Navbar.Brand
+          style={{ ...font, fontSize: "min(5vw,36px)" }}
+          href="#home"
+        >
+          <b>C</b>O<b>SM</b>O<b>S</b>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -48,7 +51,7 @@ const CoreNavbar: FC<PropsTheme> = ({ theme }) => {
             </Nav.Link>
 
             <Nav.Link style={font} href="#link">
-              <img src={Cart} alt="Planet" />0
+              <img src={Cart} alt="Planet" />
             </Nav.Link>
 
             <Form.Check
