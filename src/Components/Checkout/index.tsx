@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { Container, Button } from "react-bootstrap";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../Services/Store/store";
 
 const Checkout: FC = () => {
   const dispatch = useDispatch();
@@ -9,13 +10,20 @@ const Checkout: FC = () => {
     dispatch({ type: "CLEAR_CART" });
   };
 
+  const mobile = useSelector((state: RootState) => state.mobile);
+
+  const center = mobile && {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  };
   return (
     <Container
       style={{
         padding: 0,
         marginBottom: "135px",
         marginTop: "20px",
-        alignItems: "center",
+        ...center,
       }}
     >
       <Button

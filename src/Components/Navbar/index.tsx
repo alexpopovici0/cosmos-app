@@ -18,6 +18,8 @@ const CoreNavbar: FC<PropsTheme> = ({ theme }) => {
     color: theme.font,
   };
 
+  const ICON_STYLE = { height: "21px", width: "21px", marginRight: "2px" };
+
   return (
     <Navbar expand="lg" style={style}>
       <Container>
@@ -40,28 +42,16 @@ const CoreNavbar: FC<PropsTheme> = ({ theme }) => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link style={font} href="#home">
-              <img
-                src={Home}
-                style={{ height: "21px", width: "21px", marginRight: "2px" }}
-                alt="Home"
-              />
+              <img src={Home} style={ICON_STYLE} alt="Home" />
               Home
             </Nav.Link>
             <Nav.Link style={font} href="#destination">
-              <img
-                src={Planet}
-                style={{ height: "21px", width: "21px", marginRight: "2px" }}
-                alt="Planet"
-              />
+              <img src={Planet} style={ICON_STYLE} alt="Planet" />
               Destination
             </Nav.Link>
 
             <Nav.Link style={font} href="#spaceship">
-              <img
-                src={Spaceship}
-                style={{ height: "21px", width: "21px", marginRight: "2px" }}
-                alt="Spaceship"
-              />
+              <img src={Spaceship} style={ICON_STYLE} alt="Spaceship" />
               Spaceship
             </Nav.Link>
           </Nav>
