@@ -64,15 +64,11 @@ const Cart: FC = () => {
     <>
       <Button
         ref={target}
-        style={
-          {
-            background: "transparent",
-            border: "none",
-            hover: { outline: "none !important" },
-            "&:active": { outline: "none !important" },
-          } as React.CSSProperties
-        }
-        variant="secondary"
+        variant="cart"
+        style={{
+          background: "transparent",
+          border: "none",
+        }}
         onClick={() => setShow(!show)}
       >
         {products > 0 && (
@@ -85,6 +81,7 @@ const Cart: FC = () => {
               height: "13px",
               fontSize: "10px",
               fontWeight: "bold",
+              color: "white",
             }}
           >
             {products}

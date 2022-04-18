@@ -14,6 +14,14 @@
 .btn-primary:hover {
   background-color: hsl(125, 51%, 32%) !important;
 }
+
+.btn-secondary:hover {
+  background-color: hsl(223, 15%, 28%) !important;
+}
+.btn-cart:hover {
+  background-color: hsl(223, 15%, 28%) !important;
+}
+
 .navbar-toggler:focus {
   outline: none !important;
   outline-offset: none !important;

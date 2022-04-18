@@ -100,7 +100,11 @@ const CoreCarusel: FC<PropsTheme> = ({ theme }) => {
       }}
     >
       {!controls && (
-        <Button style={BUTTON_STYLE.Button} onClick={prevSlideHandle}>
+        <Button
+          style={BUTTON_STYLE.Button}
+          variant="secondary"
+          onClick={prevSlideHandle}
+        >
           <img style={{ height: "30px" }} src={arrow} alt="arrow" />
         </Button>
       )}
@@ -237,7 +241,11 @@ const CoreCarusel: FC<PropsTheme> = ({ theme }) => {
         </Row>
       </Container>
       {!controls && (
-        <Button style={BUTTON_STYLE.Button} onClick={nextSlideHandle}>
+        <Button
+          style={BUTTON_STYLE.Button}
+          variant="secondary"
+          onClick={nextSlideHandle}
+        >
           <img
             src={arrow}
             style={{ transform: "scaleX(-1)", height: "30px" }}
