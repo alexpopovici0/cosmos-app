@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Suicase from "../../Assets/Images/Main/suitcase.png";
 import RocketShip from "../../Assets/Images/Main/rocketship.png";
 import Leafs from "../../Assets/Images/Main/leafs.png";

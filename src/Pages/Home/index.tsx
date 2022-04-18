@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { Container } from "react-bootstrap";
 import { PropsTheme } from "../../Types/interfaces";
 import Carusel from "../../Components/Carusel";
 import Description from "./Description";

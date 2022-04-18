@@ -5,7 +5,6 @@ import Routes from "./Routes";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import store from "./Services/Store/store";
 
