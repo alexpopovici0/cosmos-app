@@ -1,7 +1,7 @@
 const light = {
   primary: "#aaaaaa",
   secondary: "#cccccc",
-  font: "#A9B5CC",
+  font: "black",
 };
 
 export default light;

@@ -1,3 +1,22 @@
 .body {
   font-family: "Ubuntu", sans-serif;
 }
+.btn:focus {
+  outline: none !important;
+  outline-offset: none !important;
+  box-shadow: none;
+}
+.btn {
+  box-shadow: none !important;
+}
+.navbar-toggler:focus {
+  outline: none !important;
+  outline-offset: none !important;
+  box-shadow: none;
+}
+.navbar-toggler {
+  box-shadow: none !important;
+}
+.modal-content {
+  border: none !important;
+}
