@@ -28,8 +28,13 @@ const Description: FC = () => {
             ></div>
           </Row>
           <Row>
-            {TEXT.map((value) => (
-              <p style={{ padding: "0", fontSize: "15px" }}>{value}</p>
+            {TEXT.map((value, index) => (
+              <p
+                key={`desc-main-${index}`}
+                style={{ padding: "0", fontSize: "15px" }}
+              >
+                {value}
+              </p>
             ))}
           </Row>
         </Col>

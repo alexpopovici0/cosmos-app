@@ -36,6 +36,7 @@ const Presentation: FC = () => {
 
         return (
           <div
+            key={`pres-item-${index}`}
             style={{
               display: "flex",
               justifyContent: "center",

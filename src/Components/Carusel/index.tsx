@@ -116,7 +116,7 @@ const CoreCarusel: FC<PropsTheme> = ({ theme }) => {
               onSelect={slideListener}
             >
               {api.products.map((value) => (
-                <Carousel.Item>
+                <Carousel.Item key={`carusel-item-${value.name}`}>
                   <div
                     style={{ position: "absolute", top: "5%", left: "2.5%" }}
                   >
@@ -165,8 +165,8 @@ const CoreCarusel: FC<PropsTheme> = ({ theme }) => {
                 <b>{info.name.substring(0, 1)}</b>
                 {info.name.substring(1, info.name.length)}
               </p>
-              {info.description.map((value) => (
-                <p>{value}</p>
+              {info.description.map((value, index) => (
+                <p key={`desc-${index}`}>{value}</p>
               ))}
             </Row>
 
