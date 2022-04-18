@@ -6,8 +6,13 @@
   outline-offset: none !important;
   box-shadow: none;
 }
-.btn {
+.btn-primary {
   box-shadow: none !important;
+  background-color: "#46C351";
+  border: none;
+}
+.btn-primary:hover {
+  background-color: hsl(125, 51%, 32%) !important;
 }
 .navbar-toggler:focus {
   outline: none !important;
