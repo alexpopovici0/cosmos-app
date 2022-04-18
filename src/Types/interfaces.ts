@@ -9,6 +9,7 @@ export interface PropsTheme {
 export interface PropsState {
   id: number;
   name: string;
+  price: number;
   quantity: number;
 }
 export interface AddAction {

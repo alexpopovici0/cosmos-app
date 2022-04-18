@@ -26,6 +26,15 @@ const Cart: FC = () => {
     dispatch({ type: "REMOVE_FROM_CART", value: id });
   };
 
+  const totalSum = () => {
+    let temp = 0;
+
+    cart.forEach((element) => {
+      temp = temp + element.quantity * element.price;
+    });
+    return temp;
+  };
+
   const MODAL_STYLE = {
     backgroundColor: "#2D333D",
     border: "none",
@@ -135,15 +144,18 @@ const Cart: FC = () => {
         </Modal.Body>
         <Modal.Footer style={MODAL_STYLE}>
           {cart.length > 0 && (
-            <Button
-              style={{ backgroundColor: "#46C351", border: "none" }}
-              onClick={() => {
-                setShow(!show);
-                dispatch({ type: "CLEAR_CART" });
-              }}
-            >
-              Checkout
-            </Button>
+            <>
+              <div style={{ fontSize: "30px" }}>Total: {totalSum()} €</div>
+              <Button
+                style={{ backgroundColor: "#46C351", border: "none" }}
+                onClick={() => {
+                  setShow(!show);
+                  dispatch({ type: "CLEAR_CART" });
+                }}
+              >
+                Checkout
+              </Button>
+            </>
           )}
         </Modal.Footer>
       </Modal>

@@ -57,7 +57,13 @@ const CoreCarusel: FC<PropsTheme> = ({ theme }) => {
     } else {
       dispatch({
         type: "ADD_TO_CART",
-        value: { id: info.id, name: info.name, quantity: 1, icon: info.image },
+        value: {
+          id: info.id,
+          name: info.name,
+          quantity: 1,
+          icon: info.image,
+          price: parseInt(info.price.replaceAll(".", "")),
+        },
       });
     }
   };
@@ -197,7 +203,7 @@ const CoreCarusel: FC<PropsTheme> = ({ theme }) => {
                     minHeight: "45px",
                   }}
                 >
-                  {info.price}
+                  {info.price} €
                 </Row>
                 <Row
                   style={{
