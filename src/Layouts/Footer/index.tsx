@@ -14,9 +14,11 @@ const CoreFooter: FC<PropsTheme> = ({ theme }) => {
       <Container>
         <br />
         <br />
-        <div>Copyright COSMOS 2022. All rights reserved.</div>
+        <div style={{ maxWidth: "348px", fontSize: "12.5px" }}>
+          Copyright COSMOS 2022. All rights reserved.
+        </div>
         <br />
-        <div style={{ maxWidth: "348px" }}>
+        <div style={{ maxWidth: "348px", fontSize: "12.5px" }}>
           All data and company references are purely fictitious and shouldn’t be
           confused with real world entities or names.
         </div>

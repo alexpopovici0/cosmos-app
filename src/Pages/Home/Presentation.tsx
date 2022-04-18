@@ -7,7 +7,14 @@ import Arrow from "../../Assets/Images/Carusel/arrow.png";
 import { useSelector } from "react-redux";
 import { RootState } from "../../Services/Store/store";
 
-const order = [Suicase, Arrow, RocketShip, Arrow, Leafs, Arrow];
+const ORDER = [
+  { icon: Suicase, name: "pack" },
+  { icon: Arrow },
+  { icon: RocketShip, name: "fly" },
+  { icon: Arrow },
+  { icon: Leafs, name: "live" },
+  { icon: Arrow },
+];
 
 const Presentation: FC = () => {
   const mobile = useSelector((state: RootState) => state.mobile);
@@ -20,9 +27,9 @@ const Presentation: FC = () => {
         marginBottom: "70px",
       }}
     >
-      {order.map((image, index) => {
+      {ORDER.map((image, index) => {
         const size = { height: "100px", transform: "" };
-        if (image === Arrow) {
+        if (image.icon === Arrow) {
           size.height = "30px";
           size.transform = mobile ? "rotate(270deg)" : "scaleX(-1)";
         }
@@ -33,14 +40,21 @@ const Presentation: FC = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              flexDirection: "column",
             }}
           >
             <img
               style={size}
-              src={image}
+              src={image.icon}
               key={`presentation-${index}`}
               alt={`presentation-${index}`}
             />
+            {image.name && (
+              <div style={{ fontSize: "24px" }}>
+                <b>{image.name.substring(0, 1)}</b>
+                {image.name.substring(1, image.name.length)}
+              </div>
+            )}
           </div>
         );
       })}
