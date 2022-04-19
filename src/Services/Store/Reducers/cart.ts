@@ -22,10 +22,8 @@ const cartReducer = (
     case "ADD_TO_CART":
       return [...state, action.value];
     case "REMOVE_FROM_CART":
-      console.log(action.value);
       return [...state.filter((value) => value.id !== action.value)];
     case "UPDATE_QUANTITY_CART":
-      console.log(action.value);
       return [
         ...state.map((value) => {
           if (value.id === action.value.id) {
